@@ -1,7 +1,7 @@
 .body {
     padding: 0px;
     margin: 0%;
-    background-color: black;
+
 }
 
 .nav {
@@ -12,4 +12,18 @@
 
 .link {
     text-decoration: none;
+}
+
+.login {
+    display: grid;
+    grid-template-rows: 50 50;
+    align-content: center;
+}
+
+.section {
+    grid-row: 1/2;
+}
+
+.section1 {
+    grid-row: 2/3;
 }
