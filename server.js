@@ -1,12 +1,13 @@
 const express = require('express')
 const session = require('express-session')
-const sqlite3 = require('sqlite3')
 
-const db = new sqlite3.Database('onerodha.db')
+const api = require('./routes/api')
 
 app = express()
 
+app.use(express.json())
 app.use(express.static('static'))
+app.use('/api',api)
 app.use(session({
     secret: 'finance',
     resave: false,
