@@ -1,25 +1,20 @@
 doctype html 
 html 
- head 
-  link(rel="stylesheet" type="text/css" href="/css/Style.css")
-  title Finance
+  head
+    link(rel="stylesheet" type="text/css" href="/css/Style.css")
+    title Finance
   body(class="body")
-   nav(class="nav")
-    a(class="link" href='') 
-      h1 Finance 
-
-
+    nav(class="nav")
+      a(class="link" href='')
+        h1 Finance
     div(class="login-container")
       h2 Login
-      form(action='your_server_script.php', method='POST')
+      form(action='/api/login', method='post')
         div(class="form-group")
           label(for='username') Username:
-          input#username(type='text', name='username', required='')
+          input(type='text', name='username')
         div(class="form-group")
           label(for='password') Password:
-          input#password(type='password', name='password', required='')
+          input(type='password', name='password')
         div(class="form-group")
           input(type='submit', value='Login')
-      
-    
-      

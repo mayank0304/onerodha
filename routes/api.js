@@ -5,6 +5,7 @@ const sqlite3 = require('sqlite3')
 const db = new sqlite3.Database('onerodha.db')
 
 router.post("/login", (req,res) => {
+  console.log(req.body)
   if(!req.body.username || !req.body.password) {
     return res.sendStatus(400)
   }
